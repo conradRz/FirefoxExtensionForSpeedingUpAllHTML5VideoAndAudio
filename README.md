@@ -1,0 +1,2 @@
+# FirefoxExtensionForSpeedingUpAllHTML5Videos
+ 
