@@ -1,13 +1,12 @@
-//BUTTON CLICK, SEND REQUEST, GET RESPONSE WITH LIST OF THE VIDEOS
-chrome.browserAction.onClicked.addListener(function(tabs) {
-  if (allowedAddresses(tabs.url)) {
-    chrome.tabs.sendMessage(tabs.id, { command: "getVideosArray" }, function(
-      response
-    ) {
-      setIconBadgeTextFromValue(tabs.id, response);
-    });
+browser.commands.onCommand.addListener(function (command) { //on command press. It works.
+  if (command == "video-speed-up") {
+    speedUp025()
+  }
+  if (command == "video-speed-down") {
+    slowDown025()
   }
 });
+
 
 //UTILITY FUNCTIONS
 function allowedAddresses(p) {
@@ -22,20 +21,6 @@ chrome.contextMenus.create({
   contexts: ["all"],
   type: "normal",
   onclick: resetSpeed
-});
-
-chrome.contextMenus.create({
-  title: "Slow Down by 0.05",
-  contexts: ["all"],
-  type: "normal",
-  onclick: slowDown005
-});
-
-chrome.contextMenus.create({
-  title: "Slow Down by 0.1",
-  contexts: ["all"],
-  type: "normal",
-  onclick: slowDown010
 });
 
 chrome.contextMenus.create({
@@ -60,8 +45,8 @@ chrome.contextMenus.create({
 });
 
 function resetSpeed() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "resetSpeed" }, function(
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { command: "resetSpeed" }, function (
       response
     ) {
       setIconBadgeTextFromValue(tabs[0].id, 1);
@@ -69,19 +54,9 @@ function resetSpeed() {
   });
 }
 
-function slowDown005() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown005" }, function(
-      response
-    ) {
-      setIconBadgeTextFromValue(tabs[0].id, response);
-    });
-  });
-}
-
-function slowDown010() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown01" }, function(
+function speedUp025() {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { command: "speedUp025" }, function (
       response
     ) {
       setIconBadgeTextFromValue(tabs[0].id, response);
@@ -90,8 +65,8 @@ function slowDown010() {
 }
 
 function slowDown025() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown025" }, function(
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown025" }, function (
       response
     ) {
       setIconBadgeTextFromValue(tabs[0].id, response);
@@ -100,8 +75,8 @@ function slowDown025() {
 }
 
 function slowDown05() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown05" }, function(
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown05" }, function (
       response
     ) {
       setIconBadgeTextFromValue(tabs[0].id, response);
@@ -110,8 +85,8 @@ function slowDown05() {
 }
 
 function slowDown1() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown1" }, function(
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown1" }, function (
       response
     ) {
       setIconBadgeTextFromValue(tabs[0].id, response);

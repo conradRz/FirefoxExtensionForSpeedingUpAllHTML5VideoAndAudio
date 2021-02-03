@@ -1,9 +1,7 @@
 chrome.runtime.onMessage.addListener(function (request, sender, response) {
   switch (request.command) {
-    case "getVideosArray": videoSpeedUp.updateElementPlaybackRate(0.25, response); break;
+    case "speedUp025": videoSpeedUp.updateElementPlaybackRate(0.25, response); break;
     case "resetSpeed": videoSpeedUp.resetElementPlaybackRate(response); break;
-    case "slowDown005": videoSpeedUp.updateElementPlaybackRate(-0.05, response); break;
-    case "slowDown01": videoSpeedUp.updateElementPlaybackRate(-0.1, response); break;
     case "slowDown025": videoSpeedUp.updateElementPlaybackRate(-0.25, response); break;
     case "slowDown05": videoSpeedUp.updateElementPlaybackRate(-0.5, response); break;
     case "slowDown1": videoSpeedUp.updateElementPlaybackRate(-1, response); break;

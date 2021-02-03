@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Video Speed Up",
   "description": "Speeds up videos playback with single click. Affects html5 videos and audio.",
-  "version": "1.5.3",
-  "author": "no9org@gmail.com",
+  "version": "1",
+  "author": "conrad.rzuc@gmail.com",
   "background": {
     "scripts": [
       "background.js"
@@ -16,14 +16,16 @@
         "https://*/*",
         "file:///*/*"
       ],
-      "js": [ "VSUScript.js" ],
+      "js": [
+        "VSUScript.js"
+      ],
       "run_at": "document_end"
-
     }
   ],
   "permissions": [
     "contextMenus",
     "tabs",
+    "<all_urls>",
     "http://*/*",
     "https://*/*",
     "file:///*/*"
@@ -37,14 +39,25 @@
     "48": "icon48.png",
     "64": "icon64.png",
     "128": "icon128.png"
-  }
-
-
-  ,  "applications": {
+  },
+  "applications": {
     "gecko": {
       "id": "{1a4bd89e-02af-49a7-b6d5-aad47d4c0bcc}",
       "strict_min_version": "42.0"
     }
+  },
+  "commands": {
+    "video-speed-up": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Speed up a video, any video"
+    },
+    "video-speed-down": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Speed down a video, any video"
+    }
   }
-
 }
