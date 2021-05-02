@@ -3,8 +3,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, response) {
     case "speedUp025": videoSpeedUp.updateElementPlaybackRate(0.25, response); break;
     case "resetSpeed": videoSpeedUp.resetElementPlaybackRate(response); break;
     case "slowDown025": videoSpeedUp.updateElementPlaybackRate(-0.25, response); break;
-    case "slowDown05": videoSpeedUp.updateElementPlaybackRate(-0.5, response); break;
-    case "slowDown1": videoSpeedUp.updateElementPlaybackRate(-1, response); break;
   }
 });
 
@@ -22,7 +20,7 @@ var videoSpeedUp = function () {
   function resetElementPlaybackRate(response) {
     var element = returnCurrentlyPlayingElement(lastActiveElement);
     if (typeof element === 'undefined') { return }
-    element.playbackRate = 1;
+    element.playbackRate = 2.25;
     lastActiveElement = element;
     response(element.playbackRate);
   }
