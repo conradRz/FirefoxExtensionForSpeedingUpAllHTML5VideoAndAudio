@@ -1,0 +1,3 @@
+use console, navigate to the app folder. Use "web-ext build" to generate an archive, which you can then rename to .xpi and submit online to be signed
+
+To use highlight the entry and select [Entries->TOTP->Show TOTP... ](or copy TOTP... if easier) [when signing it to the dev account with keepassxc]

@@ -1,1 +1,0 @@
-use console, navigate to the app folder. Use "web-ext build" to generate an archive, which you can then rename to .xpi and submit online to be signed

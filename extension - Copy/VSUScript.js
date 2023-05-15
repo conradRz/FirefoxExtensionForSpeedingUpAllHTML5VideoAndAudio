@@ -9,10 +9,14 @@ chrome.runtime.onMessage.addListener(function (request, sender, response) {
 var videoSpeedUp = function () {
   var lastActiveElement = undefined;
 
-  function updateElementPlaybackRate(changeValue, response, elementToChange) {
+  function updateElementPlaybackRate(changeValue, response) {
     var elementToChange = returnCurrentlyPlayingElement(lastActiveElement);
 
     if (typeof elementToChange === 'undefined') { return }
+    if ((elementToChange.playbackRate + changeValue) <= 0.75) {
+      response(elementToChange.playbackRate);
+      return;
+    } //new, do nothing, as you don't want to go below x1 speed
     elementToChange.playbackRate += changeValue;
     response(elementToChange.playbackRate);
   }
@@ -20,8 +24,11 @@ var videoSpeedUp = function () {
   function resetElementPlaybackRate(response) {
     var element = returnCurrentlyPlayingElement(lastActiveElement);
     if (typeof element === 'undefined') { return }
-    element.playbackRate = 2.25;
-    lastActiveElement = element;
+    if (element.playbackRate != 1) {
+      response(element.playbackRate);
+      return;
+    } //new, do nothing if you already have a custom speed set up
+    element.playbackRate = 2.5;
     response(element.playbackRate);
   }
 

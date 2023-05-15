@@ -11,9 +11,10 @@ browser.webNavigation.onHistoryStateUpdated.addListener(resetSpeed); //works, bu
 //browser.webNavigation.onReferenceFragmentUpdated.addListener(resetSpeed);//don't use that
 //browser.webNavigation.onDOMContentLoaded.addListener(resetSpeed);
 browser.webNavigation.onCompleted.addListener(resetSpeed);
+browser.tabs.onActivated.addListener(resetSpeed)
 
 async function resetSpeed() {
-  await new Promise(r => setTimeout(r, 1000)); 
+  await new Promise(r => setTimeout(r, 1000));
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { command: "resetSpeed" }, function (
       response
