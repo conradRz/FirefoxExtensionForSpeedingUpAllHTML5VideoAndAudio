@@ -2,12 +2,17 @@
   "manifest_version": 2,
   "name": "Audio/Video Speed Up",
   "version": "1.3",
-  "description": "Speeds up playback. Affects all html5 videos and audio.",
+  "description": "Speeds up playback. Affects all html5 videos and audio. | Speed up: Ctrl+Shift+U | Speed down: Ctrl+Shift+Y",
   "icons": {
     "128": "icon128.png"
   },
   "browser_action": {
-    "default_icon": "icon128.png"
+    "default_icon": "icon128.png",
+    "default_popup": "settings.html"
+  },
+  "options_ui": {
+    "page": "settings.html",
+    "browser_style": false
   },
   "developer": {
     "name": "conrad.rzuc@gmail.com",
@@ -43,7 +48,7 @@
     "http://*/*",
     "https://*/*",
     "file:///*/*",
-	"webNavigation"
+	  "webNavigation"
   ],
   "commands": {
     "video-speed-up": {
@@ -51,14 +56,14 @@
         "default": "Ctrl+Shift+U",
         "mac": "Command+Shift+U"
       },
-      "description": "Speed up a video, any video"
+      "description": "Speed up"
     },
     "video-speed-down": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y"
       },
-      "description": "Speed down a video, any video"
+      "description": "Speed down"
     }
   }
 }
