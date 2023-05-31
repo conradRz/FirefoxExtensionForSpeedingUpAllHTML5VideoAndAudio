@@ -1,7 +1,9 @@
 ## FirefoxExtensionForSpeedingUpAllHTML5VideoAndAudio
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Paypal donate button](readmePics/PayPal-Donate-Button.png)](https://www.paypal.com/donate/?hosted_button_id=2QH26ZA928JNC)
-<br/><br/>
+
+---
+
 ![](readmePics/blank.png) ![](readmePics/1.5.png) ![](readmePics/3.5.png)
 
 ![](readmePics/unchangeableOptions.png)
