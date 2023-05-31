@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Video Speed Up",
-  "description": "Speeds up multimedia playback. Affects all html5 videos and audio.",
+  "name": "Audio/Video Speed Up",
+  "description": "Speeds up playback. Affects all html5 videos and audio.",
   "version": "1.3",
   "author": "conrad.rzuc@gmail.com",
   "background": {
