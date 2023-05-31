@@ -1,4 +1,4 @@
-# FirefoxExtensionForSpeedingUpAllHTML5Videos
+# FirefoxExtensionForSpeedingUpAllHTML5VideoAndAudio
 
 It speeds ALL html5 videos AND audio (even when it's only audio, without video). 
 
