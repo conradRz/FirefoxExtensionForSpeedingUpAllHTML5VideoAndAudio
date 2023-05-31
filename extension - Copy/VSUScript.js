@@ -1,56 +1,67 @@
-chrome.runtime.onMessage.addListener(function (request, sender, response) {
+browser.runtime.onMessage.addListener(function (request, sender) {
   switch (request.command) {
-    case "speedUp025": videoSpeedUp.updateElementPlaybackRate(0.25, response); break;
-    case "resetSpeed": videoSpeedUp.resetElementPlaybackRate(response); break;
-    case "slowDown025": videoSpeedUp.updateElementPlaybackRate(-0.25, response); break;
+    case "speedUp025":
+      return updateElementPlaybackRate(0.25);
+    case "resetSpeed":
+      return resetElementPlaybackRate();
+    case "slowDown025":
+      return updateElementPlaybackRate(-0.25);
   }
 });
 
-var videoSpeedUp = function () {
+function updateElementPlaybackRate(changeValue) {
+  return new Promise(function (resolve) {
+    var element = getCurrentlyPlayingElement();
+
+    if (typeof element === 'undefined') {
+      resolve();
+      return;
+    }
+
+    var newPlaybackRate = element.playbackRate + changeValue;
+    if (newPlaybackRate < 0.75) {
+      resolve(element.playbackRate);
+      return;
+    }
+
+    element.playbackRate = newPlaybackRate;
+    resolve(element.playbackRate);
+  });
+}
+
+function resetElementPlaybackRate() {
+  return new Promise(function (resolve) {
+    var element = getCurrentlyPlayingElement();
+
+    if (typeof element === 'undefined') {
+      resolve();
+      return;
+    }
+
+    if (element.playbackRate === 1) {
+      resolve();
+      return;
+    }
+
+    element.playbackRate = 1;
+    resolve(element.playbackRate);
+  });
+}
+
+function getCurrentlyPlayingElement() {
+  var elements = document.querySelectorAll("video, audio");
   var lastActiveElement = undefined;
 
-  function updateElementPlaybackRate(changeValue, response) {
-    var elementToChange = returnCurrentlyPlayingElement(lastActiveElement);
-
-    if (typeof elementToChange === 'undefined') { return }
-    if ((elementToChange.playbackRate + changeValue) <= 0.75) {
-      response(elementToChange.playbackRate);
-      return;
-    } //new, do nothing, as you don't want to go below x1 speed
-    elementToChange.playbackRate += changeValue;
-    response(elementToChange.playbackRate);
+  if (typeof lastActiveElement === 'undefined') {
+    lastActiveElement = elements[0];
   }
 
-  function resetElementPlaybackRate(response) {
-    var element = returnCurrentlyPlayingElement(lastActiveElement);
-    if (typeof element === 'undefined') { return }
-    if (element.playbackRate != 1) {
-      response(element.playbackRate);
-      return;
-    } //new, do nothing if you already have a custom speed set up
-    element.playbackRate = 2.5;
-    response(element.playbackRate);
-  }
-
-  function returnCurrentlyPlayingElement(lastActiveElement) {
-    var element;
-    var elements = document.querySelectorAll("video,audio");
-    if (typeof lastActiveElement === 'undefined') {
-      element = elements[0];
-    } else {
-      element = lastActiveElement;
+  for (var element of elements) {
+    if (!element.paused) {
+      lastActiveElement = element;
+      return element;
     }
-    for (e in Object.getOwnPropertyNames(elements)) {
-      if (!elements[e].paused) {
-        element = elements[e];
-        return element;
-      }
-    }
-    return element;
   }
 
-  return {
-    updateElementPlaybackRate: updateElementPlaybackRate,
-    resetElementPlaybackRate: resetElementPlaybackRate
-  }
-}()
+  return lastActiveElement;
+}

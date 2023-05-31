@@ -1,55 +1,44 @@
-browser.commands.onCommand.addListener(function (command) { //on command press. It works.
+browser.commands.onCommand.addListener(function (command) {
   if (command == "video-speed-up") {
-    speedUp025()
+    speedUp025();
   }
   if (command == "video-speed-down") {
-    slowDown025()
+    slowDown025();
   }
 });
 
-browser.webNavigation.onHistoryStateUpdated.addListener(resetSpeed); //works, but not on the first video
-//browser.webNavigation.onReferenceFragmentUpdated.addListener(resetSpeed);//don't use that
-//browser.webNavigation.onDOMContentLoaded.addListener(resetSpeed);
 browser.webNavigation.onCompleted.addListener(resetSpeed);
-browser.tabs.onActivated.addListener(resetSpeed)
+//browser.tabs.onActivated.addListener(resetSpeed); //this, uncommented, would reset speed when navigating back to a sped up tab, which for my use, is not intended behaviour
 
 async function resetSpeed() {
-  await new Promise(r => setTimeout(r, 1000));
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "resetSpeed" }, function (
-      response
-    ) {
-      setIconBadgeTextFromValue(tabs[0].id, response);
-    });
-  });
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  const tabs = await browser.tabs.query({ active: true, currentWindow: true });
+  const response = await sendMessageToContentScript(tabs[0].id, { command: "resetSpeed" });
+  setIconBadgeTextFromValue(tabs[0].id, response);
 }
 
 function speedUp025() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "speedUp025" }, function (
-      response
-    ) {
-      setIconBadgeTextFromValue(tabs[0].id, response);
-    });
+  browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+    sendMessageToContentScript(tabs[0].id, { command: "speedUp025" })
+      .then(response => setIconBadgeTextFromValue(tabs[0].id, response));
   });
 }
 
 function slowDown025() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { command: "slowDown025" }, function (
-      response
-    ) {
-      setIconBadgeTextFromValue(tabs[0].id, response);
-    });
+  browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+    sendMessageToContentScript(tabs[0].id, { command: "slowDown025" })
+      .then(response => setIconBadgeTextFromValue(tabs[0].id, response));
   });
 }
 
 function setIconBadgeTextFromValue(tabId, value) {
-  var formattedStringToSet = !isNaN(value)
-    ? (Math.round(value * 100) / 100).toString()
-    : "";
-  chrome.browserAction.setBadgeText({
-    text: formattedStringToSet,
-    tabId: tabId
-  });
+  const formattedStringToSet = !isNaN(value) ? (Math.round(value * 100) / 100).toString() : "";
+  browser.browserAction.setBadgeText({ text: formattedStringToSet, tabId: tabId });
+}
+
+function sendMessageToContentScript(tabId, message) {
+  return browser.tabs.sendMessage(tabId, message)
+    .then(response => response)
+    .catch(error => console.error("Error sending message to content script:", error));
 }
