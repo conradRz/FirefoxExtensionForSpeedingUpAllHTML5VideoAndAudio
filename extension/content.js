@@ -1,4 +1,4 @@
-browser.runtime.onMessage.addListener(function (request, sender) {
+browser.runtime.onMessage.addListener(function (request) {
   switch (request.command) {
     case "speedUp025":
       return updateElementPlaybackRate(0.25);
@@ -8,6 +8,8 @@ browser.runtime.onMessage.addListener(function (request, sender) {
       return updateElementPlaybackRate(-0.25);
   }
 });
+
+//put here DOM completed listener, and then set speed of AUDIO/VIDEO elements based on settings
 
 function updateElementPlaybackRate(changeValue) {
   return new Promise(function (resolve) {
