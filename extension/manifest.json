@@ -16,28 +16,20 @@
   },
   "developer": {
     "name": "conrad.rzuc@gmail.com",
-    "url": "https://github.com/conradOU/"
+    "url": "https://github.com/conradRz/"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://*/*",
-        "file:///*/*"
-      ],
-	  "exclude_matches": [
+      "matches": ["http://*/*", "https://*/*", "file:///*/*"],
+      "exclude_matches": [
         "https://plus.google.com/hangouts/*",
         "https://hangouts.google.com/*",
         "https://meet.google.com/*"
       ],
-      "js": [
-        "VSUScript.js"
-      ],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ],
@@ -48,7 +40,7 @@
     "http://*/*",
     "https://*/*",
     "file:///*/*",
-	  "webNavigation"
+    "webNavigation"
   ],
   "commands": {
     "video-speed-up": {
