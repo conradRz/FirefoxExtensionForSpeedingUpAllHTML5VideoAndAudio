@@ -7,7 +7,7 @@ browser.commands.onCommand.addListener(function (command) {
   }
 });
 
-browser.webNavigation.onCompleted.addListener(resetSpeed);
+//browser.webNavigation.onCompleted.addListener(resetSpeed); 
 //browser.tabs.onActivated.addListener(resetSpeed); //this, uncommented, would reset speed when navigating back to a sped up tab, which for my use, is not intended behaviour
 
 async function resetSpeed() {
