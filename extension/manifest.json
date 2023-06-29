@@ -40,7 +40,8 @@
     "http://*/*",
     "https://*/*",
     "file:///*/*",
-    "webNavigation"
+    "webNavigation",
+    "storage"
   ],
   "commands": {
     "video-speed-up": {
