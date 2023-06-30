@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Audio/Video Speed Up",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Speeds up playback. Affects all html5 videos and audio. | Speed up: Ctrl+Shift+U | Speed down: Ctrl+Shift+Y",
   "icons": {
     "128": "icon128.png"
@@ -19,25 +19,17 @@
     "url": "https://github.com/conradOU/"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://*/*",
-        "file:///*/*"
-      ],
-	  "exclude_matches": [
+      "matches": ["http://*/*", "https://*/*", "file:///*/*"],
+      "exclude_matches": [
         "https://plus.google.com/hangouts/*",
         "https://hangouts.google.com/*",
         "https://meet.google.com/*"
       ],
-      "js": [
-        "VSUScript.js"
-      ],
+      "js": ["VSUScript.js"],
       "run_at": "document_end"
     }
   ],
@@ -48,7 +40,7 @@
     "http://*/*",
     "https://*/*",
     "file:///*/*",
-	  "webNavigation"
+    "webNavigation"
   ],
   "commands": {
     "video-speed-up": {
