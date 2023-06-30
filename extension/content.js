@@ -4,6 +4,8 @@ browser.runtime.onMessage.addListener(function (request) {
       return updateElementPlaybackRate(0.25); //even though they return nothing, without "return" it won't work here, oddly enough, and don't want to do break statement
     case "slowDown025":
       return updateElementPlaybackRate(-0.25);
+    case "setCustomSpeed":
+      return updateElementPlaybackRate(request.rate);
   }
 });
 
@@ -11,23 +13,30 @@ function updateElementPlaybackRate(changeValue) {
   return new Promise(function (resolve) {
     const element = getCurrentlyPlayingElement();
 
-    if (typeof element === 'undefined') {
+    if (!element) {
       resolve();
       return;
     }
 
-    const newPlaybackRate = element.playbackRate + changeValue;
+    const currentPlaybackRate = element.playbackRate;
+    const newPlaybackRate = currentPlaybackRate + changeValue;
+
     if (newPlaybackRate < 0.75) {
-      resolve(element.playbackRate);
+      resolve(currentPlaybackRate);
       return;
     }
 
     element.playbackRate = newPlaybackRate;
 
     // Store newPlaybackRate
-    browser.storage.local.set({ lastPlaybackRate: newPlaybackRate });
-
-    resolve(element.playbackRate);
+    browser.storage.local.set({ lastPlaybackRate: newPlaybackRate })
+      .then(() => {
+        resolve(newPlaybackRate);
+      })
+      .catch(error => {
+        console.error("Error storing playback rate:", error);
+        resolve(newPlaybackRate);
+      });
   });
 }
 
