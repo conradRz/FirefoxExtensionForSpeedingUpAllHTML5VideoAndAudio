@@ -60,7 +60,8 @@ browser.storage.local.get({ selectedOption: "all" }).then(result => {
       const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
       if (lastPlaybackRate !== 1) {
         const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
-        updateElementPlaybackRate(newPlaybackRate);
+        updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
+        //here you will call updateElementPlaybackRate in the background script
       }
     });
   }

@@ -6,6 +6,13 @@ browser.commands.onCommand.addListener(function (command) {
   }
 });
 
+browser.runtime.onMessage.addListener(function (request) {
+  if (request.command === "updateBadgeText") {
+    const { value } = request;
+    setIconBadgeTextFromValue(null, value);
+  }
+});
+
 function speedUp025() {
   browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
     sendMessageToContentScript(tabs[0].id, { command: "speedUp025" })
