@@ -4,8 +4,6 @@ browser.runtime.onMessage.addListener(function (request) {
       return updateElementPlaybackRate(0.25); //even though they return nothing, without "return" it won't work here, oddly enough, and don't want to do break statement
     case "slowDown025":
       return updateElementPlaybackRate(-0.25);
-    case "setCustomSpeed":
-      return updateElementPlaybackRate(request.rate);
   }
 });
 
@@ -61,7 +59,6 @@ browser.storage.local.get({ selectedOption: "all" }).then(result => {
       if (lastPlaybackRate !== 1) {
         const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
         updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
-        //here you will call updateElementPlaybackRate in the background script
       }
     });
   }
