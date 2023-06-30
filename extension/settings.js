@@ -1,11 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve the last selected option from storage
+    browser.storage.local.get("selectedOption").then(function (result) {
+        let selectedOption = result.selectedOption || "tab";
+
+        // Set the selected option based on the retrieved value
+        let applyAllRadio = document.getElementById("apply-all");
+        let applyTabRadio = document.getElementById("apply-tab");
+
+        if (selectedOption === "all") {
+            applyAllRadio.checked = true;
+        } else {
+            applyTabRadio.checked = true;
+        }
+    });
+
+    // Store the user-selected option on change
+    let applyAllRadio = document.getElementById("apply-all");
+    let applyTabRadio = document.getElementById("apply-tab");
+
+    applyAllRadio.addEventListener("change", function () {
+        browser.storage.local.set({ selectedOption: "all" });
+    });
+
+    applyTabRadio.addEventListener("change", function () {
+        browser.storage.local.set({ selectedOption: "tab" });
+    });
+
     // Retrieve the current keyboard shortcuts
     browser.commands.getAll().then(function (commands) {
-        var shortcutList = document.getElementById("shortcut-list");
+        let shortcutList = document.getElementById("shortcut-list");
 
         // Display the current keyboard shortcuts
         commands.forEach(function (command) {
-            var listItem = document.createElement("li");
+            let listItem = document.createElement("li");
             listItem.textContent = `${command.description}: ${command.shortcut}`;
 
             shortcutList.appendChild(listItem);
