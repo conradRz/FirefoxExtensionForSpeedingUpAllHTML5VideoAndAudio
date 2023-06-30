@@ -24,8 +24,8 @@ function updateElementPlaybackRate(changeValue) {
 
     element.playbackRate = newPlaybackRate;
 
-    // Store newPlaybackRate in localStorage
-    localStorage.setItem('newPlaybackRate', newPlaybackRate);
+    // Store newPlaybackRate
+    browser.storage.local.set({ lastPlaybackRate: newPlaybackRate });
 
     resolve(element.playbackRate);
   });
