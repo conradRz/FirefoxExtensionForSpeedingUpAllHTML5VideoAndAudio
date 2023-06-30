@@ -1,8 +1,7 @@
 browser.commands.onCommand.addListener(function (command) {
   if (command == "video-speed-up") {
     speedUp025();
-  }
-  if (command == "video-speed-down") {
+  } else if (command == "video-speed-down") {
     slowDown025();
   }
 });

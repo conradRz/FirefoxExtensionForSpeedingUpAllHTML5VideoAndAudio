@@ -1,7 +1,7 @@
 browser.runtime.onMessage.addListener(function (request) {
   switch (request.command) {
     case "speedUp025":
-      return updateElementPlaybackRate(0.25);
+      return updateElementPlaybackRate(0.25); //even though they return nothing, without "return" it won't work here, oddly enough, and don't want to do break statement
     case "slowDown025":
       return updateElementPlaybackRate(-0.25);
   }
@@ -9,33 +9,33 @@ browser.runtime.onMessage.addListener(function (request) {
 
 function updateElementPlaybackRate(changeValue) {
   return new Promise(function (resolve) {
-    var element = getCurrentlyPlayingElement();
+    const element = getCurrentlyPlayingElement();
 
     if (typeof element === 'undefined') {
       resolve();
       return;
     }
 
-    var newPlaybackRate = element.playbackRate + changeValue;
+    const newPlaybackRate = element.playbackRate + changeValue;
     if (newPlaybackRate < 0.75) {
       resolve(element.playbackRate);
       return;
     }
 
     element.playbackRate = newPlaybackRate;
+
+    // Store newPlaybackRate in localStorage
+    localStorage.setItem('newPlaybackRate', newPlaybackRate);
+
     resolve(element.playbackRate);
   });
 }
 
 function getCurrentlyPlayingElement() {
-  var elements = document.querySelectorAll("video, audio");
-  var lastActiveElement = undefined;
+  const elements = document.querySelectorAll("video, audio");
+  let lastActiveElement = elements[0]
 
-  if (typeof lastActiveElement === 'undefined') {
-    lastActiveElement = elements[0];
-  }
-
-  for (var element of elements) {
+  for (let element of elements) {
     if (!element.paused) {
       lastActiveElement = element;
       return element;
