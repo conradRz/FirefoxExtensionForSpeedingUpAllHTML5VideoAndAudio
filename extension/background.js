@@ -7,17 +7,6 @@ browser.commands.onCommand.addListener(function (command) {
   }
 });
 
-//browser.webNavigation.onCompleted.addListener(resetSpeed); 
-//browser.tabs.onActivated.addListener(resetSpeed); //this, uncommented, would reset speed when navigating back to a sped up tab, which for my use, is not intended behaviour
-
-async function resetSpeed() {
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  const tabs = await browser.tabs.query({ active: true, currentWindow: true });
-  const response = await sendMessageToContentScript(tabs[0].id, { command: "resetSpeed" });
-  setIconBadgeTextFromValue(tabs[0].id, response);
-}
-
 function speedUp025() {
   browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
     sendMessageToContentScript(tabs[0].id, { command: "speedUp025" })
