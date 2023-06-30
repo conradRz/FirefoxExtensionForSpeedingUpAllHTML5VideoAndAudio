@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     applyTabRadio.addEventListener("change", function () {
         browser.storage.local.set({ selectedOption: "tab" });
+        browser.storage.local.remove('lastPlaybackRate') //potentially, keep that here, to prevent unintended behaviour, upon reselecting the "all" option
     });
 
     // Retrieve the current keyboard shortcuts

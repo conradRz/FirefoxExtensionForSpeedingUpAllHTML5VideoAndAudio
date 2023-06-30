@@ -53,3 +53,15 @@ function getCurrentlyPlayingElement() {
 
   return lastActiveElement;
 }
+
+browser.storage.local.get({ selectedOption: "all" }).then(result => {
+  if (result.selectedOption === "all") {
+    browser.storage.local.get({ lastPlaybackRate: 1 }).then(data => {
+      const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
+      if (lastPlaybackRate !== 1) {
+        const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
+        updateElementPlaybackRate(newPlaybackRate);
+      }
+    });
+  }
+});

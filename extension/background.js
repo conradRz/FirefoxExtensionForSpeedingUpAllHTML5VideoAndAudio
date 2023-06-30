@@ -30,3 +30,10 @@ function sendMessageToContentScript(tabId, message) {
     .then(response => response)
     .catch(error => console.error("Error sending message to content script:", error));
 }
+
+function updateElementPlaybackRate(rate) {
+  browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+    sendMessageToContentScript(tabs[0].id, { command: "setCustomSpeed", rate: rate })
+      .then(response => setIconBadgeTextFromValue(tabs[0].id, response));
+  });
+}
