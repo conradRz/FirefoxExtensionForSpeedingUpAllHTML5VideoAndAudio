@@ -52,14 +52,31 @@ function getCurrentlyPlayingElement() {
   return lastActiveElement;
 }
 
-browser.storage.local.get({ selectedOption: "all" }).then(result => {
-  if (result.selectedOption === "all") {
-    browser.storage.local.get({ lastPlaybackRate: 1 }).then(data => {
-      const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
-      if (lastPlaybackRate !== 1) {
-        const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
-        updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
+let currentUrl = ''
+
+/**
+  * This function will be called periodically.
+  * Check if the URL has changed, as changed URL, doesn't mean that the content script is reloaded.
+  */
+const init = async () => {
+  const newUrl = location.href
+  if (currentUrl !== newUrl) {
+    browser.storage.local.get({ selectedOption: "all" }).then(result => {
+      if (result.selectedOption === "all") {
+        browser.storage.local.get({ lastPlaybackRate: 1 }).then(data => {
+          const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
+          if (lastPlaybackRate !== 1) {
+            const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
+            updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
+          }
+        });
       }
     });
+    currentUrl = newUrl;
   }
-});
+
+  // Call periodically again
+  setTimeout(init, 1000)
+}
+
+init()
