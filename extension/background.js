@@ -21,7 +21,7 @@ function sendCommandToContentScript(commandName) {
 }
 
 function setIconBadgeTextFromValue(tabId, value) {
-  browser.browserAction.setBadgeText({ text: value, tabId: tabId });
+  browser.browserAction.setBadgeText({ text: value.toString(), tabId: tabId }); //the "value" has to be in the string form, hence .toString()
 }
 
 function sendMessageToContentScript(tabId, message) {
