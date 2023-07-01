@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Zrychlení zvuku / obrazu"
+  },
+  "appDesc": {
+    "message": "Zrychluje přehrávání. Ovlivňuje všechna HTML5 videa a audio. | Zrychlit: Ctrl+Shift+U | Zpomalit: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Zrychlit"
+  },
+  "Speed_down": {
+    "message": "Zpomalit"
+  },
+  "popupTitle": {
+    "message": "Klávesové zkratky"
+  },
+  "popupWarning": {
+    "message": "Aktuální zkratky nelze změnit, aby nedocházelo ke konfliktům s důležitými funkcemi prohlížeče nebo výchozími zkratkami."
+  },
+  "popup-apply-all-message": {
+    "message": "Použít na všechny budoucí karty s videem a audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Použít pouze na aktuální kartu"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Audio/Video Paātrināšana"
+  },
+  "appDesc": {
+    "message": "Paātrina atskaņošanu. Ietekmē visus HTML5 video un audio materiālus. | Paātrināt: Ctrl+Shift+U | Palēnināt: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Paātrināt"
+  },
+  "Speed_down": {
+    "message": "Palēnināt"
+  },
+  "popupTitle": {
+    "message": "Taustiņu saīsnes"
+  },
+  "popupWarning": {
+    "message": "Pašreizējās taustiņu saīsnes nevar mainīt, lai izvairītos no konfliktiem ar būtiskām pārlūka funkcijām vai noklusētajām taustiņu saīsnēm."
+  },
+  "popup-apply-all-message": {
+    "message": "Lietot visās nākotnes cilnēs ar video un audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Lietot tikai pašreizējā cilnē"
+  }
+}

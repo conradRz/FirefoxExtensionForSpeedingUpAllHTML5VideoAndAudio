@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Audio/Video Kiirendamine"
+  },
+  "appDesc": {
+    "message": "Kiirendab taasesitust. Mõjutab kõiki HTML5 videoid ja helisid. | Kiirenda: Ctrl+Shift+U | Aeglusta: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Kiirenda"
+  },
+  "Speed_down": {
+    "message": "Aeglusta"
+  },
+  "popupTitle": {
+    "message": "Klaviatuuri otseteed"
+  },
+  "popupWarning": {
+    "message": "Praegused otseteed ei ole muudetavad, et vältida konflikte oluliste brauserifunktsioonide või vaikeseadistuse otseteedega."
+  },
+  "popup-apply-all-message": {
+    "message": "Rakenda kõikidele tulevastele vahekaartidele, millel on video ja heli"
+  },
+  "popup-apply-tab-message": {
+    "message": "Rakenda ainult praegusele vahekaardile"
+  }
+}

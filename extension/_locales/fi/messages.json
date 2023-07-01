@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Äänen/videnopeutus"
+  },
+  "appDesc": {
+    "message": "Nopeuttaa toistoa. Vaikuttaa kaikkiin html5-videoihin ja äänitiedostoihin. | Nopeuta: Ctrl+Shift+U | Hidasta: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Nopeuta"
+  },
+  "Speed_down": {
+    "message": "Hidasta"
+  },
+  "popupTitle": {
+    "message": "Pikanäppäimet"
+  },
+  "popupWarning": {
+    "message": "Nykyiset pikanäppäimet eivät ole muokattavissa konfliktien välttämiseksi selaimen tärkeiden toimintojen tai oletuspikanäppäinten kanssa."
+  },
+  "popup-apply-all-message": {
+    "message": "Käytä kaikkiin tuleviin välilehtiin, joissa on video tai ääni"
+  },
+  "popup-apply-tab-message": {
+    "message": "Käytä vain nykyiseen välilehteen"
+  }
+}

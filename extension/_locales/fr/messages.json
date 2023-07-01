@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Accélérer l'audio/la vidéo"
+  },
+  "appDesc": {
+    "message": "Accélère la lecture. Affecte toutes les vidéos et tous les audios HTML5. | Accélérer : Ctrl+Shift+U | Ralentir : Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Accélérer"
+  },
+  "Speed_down": {
+    "message": "Ralentir"
+  },
+  "popupTitle": {
+    "message": "Raccourcis clavier"
+  },
+  "popupWarning": {
+    "message": "Les raccourcis actuels ne peuvent pas être modifiés pour éviter les conflits avec les fonctions essentielles du navigateur ou les raccourcis par défaut."
+  },
+  "popup-apply-all-message": {
+    "message": "Appliquer à tous les onglets futurs avec vidéo et audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Appliquer uniquement à l'onglet actuel"
+  }
+}

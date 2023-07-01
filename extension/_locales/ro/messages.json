@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Accelerare Audio/Video"
+  },
+  "appDesc": {
+    "message": "Accelerază redarea. Afectează toate videoclipurile și fișierele audio HTML5. | Accelerare: Ctrl+Shift+U | Reducere viteză: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Accelerare"
+  },
+  "Speed_down": {
+    "message": "Reducere viteză"
+  },
+  "popupTitle": {
+    "message": "Scurtături de tastatură"
+  },
+  "popupWarning": {
+    "message": "Scurtăturile de tastatură curente nu pot fi modificate pentru a evita conflictele cu funcțiile esențiale ale browserului sau scurtăturile implicite."
+  },
+  "popup-apply-all-message": {
+    "message": "Aplică la toate filele viitoare cu videoclipuri și fișiere audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Aplică doar filei curente"
+  }
+}

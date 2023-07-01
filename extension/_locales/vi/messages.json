@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Tăng tốc Âm thanh/Video"
+  },
+  "appDesc": {
+    "message": "Tăng tốc phát lại. Ảnh hưởng đến tất cả video và âm thanh html5. | Tăng tốc: Ctrl+Shift+U | Giảm tốc: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Tăng tốc"
+  },
+  "Speed_down": {
+    "message": "Giảm tốc"
+  },
+  "popupTitle": {
+    "message": "Phím tắt"
+  },
+  "popupWarning": {
+    "message": "Các phím tắt hiện tại không thể thay đổi để tránh xung đột với các chức năng trình duyệt cần thiết hoặc các phím tắt mặc định."
+  },
+  "popup-apply-all-message": {
+    "message": "Áp dụng cho tất cả tab tương lai có video và âm thanh"
+  },
+  "popup-apply-tab-message": {
+    "message": "Chỉ áp dụng cho tab hiện tại"
+  }
+}

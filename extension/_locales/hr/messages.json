@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Ubrzavanje zvuka/videozapisa"
+  },
+  "appDesc": {
+    "message": "Ubrzava reprodukciju. Utječe na sve HTML5 videozapise i audiozapise. | Ubrzajte: Ctrl+Shift+U | Usporite: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Ubrzajte"
+  },
+  "Speed_down": {
+    "message": "Usporite"
+  },
+  "popupTitle": {
+    "message": "Prečaci tipkovnice"
+  },
+  "popupWarning": {
+    "message": "Trenutni prečaci nisu promjenjivi kako bi se izbjegli sukobi s bitnim funkcijama preglednika ili zadanim prečacima."
+  },
+  "popup-apply-all-message": {
+    "message": "Primijeni na sve buduće kartice s videozapisima i audiozapisima"
+  },
+  "popup-apply-tab-message": {
+    "message": "Primijeni samo na trenutnu karticu"
+  }
+}

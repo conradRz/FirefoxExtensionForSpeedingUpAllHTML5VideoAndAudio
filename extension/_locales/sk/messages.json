@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Zrýchlenie zvuku/videá"
+  },
+  "appDesc": {
+    "message": "Zrýchľuje prehrávanie. Ovplyvňuje všetky html5 videá a zvuky. | Zrýchliť: Ctrl+Shift+U | Spomaliť: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Zrýchliť"
+  },
+  "Speed_down": {
+    "message": "Spomaliť"
+  },
+  "popupTitle": {
+    "message": "Klávesové skratky"
+  },
+  "popupWarning": {
+    "message": "Aktuálne skratky nie je možné zmeniť, aby sa predišlo konfliktom so základnými funkciami prehliadača alebo predvolenými skratkami."
+  },
+  "popup-apply-all-message": {
+    "message": "Použiť na všetky budúce karty s videom a zvukom"
+  },
+  "popup-apply-tab-message": {
+    "message": "Použiť iba na aktuálnu kartu"
+  }
+}

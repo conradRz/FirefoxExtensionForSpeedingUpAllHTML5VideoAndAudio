@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Przyspieszenie audio/wideo"
+  },
+  "appDesc": {
+    "message": "Przyspiesza odtwarzanie. Wpływa na wszystkie pliki wideo i audio HTML5. | Przyspieszenie: Ctrl+Shift+U | Zmniejszenie: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Przyspiesz"
+  },
+  "Speed_down": {
+    "message": "Zwolnij"
+  },
+  "popupTitle": {
+    "message": "Skróty klawiaturowe"
+  },
+  "popupWarning": {
+    "message": "Obecnych skrótów nie można zmieniać, aby uniknąć konfliktów z podstawowymi funkcjami przeglądarki lub domyślnymi skrótami."
+  },
+  "popup-apply-all-message": {
+    "message": "Zastosuj do wszystkich przyszłych kart z wideo i dźwiękiem"
+  },
+  "popup-apply-tab-message": {
+    "message": "Zastosuj tylko do bieżącej karty"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Ses/Video Hızlandırıcı"
+  },
+  "appDesc": {
+    "message": "Oynatmayı hızlandırır. Tüm html5 videoları ve sesleri etkiler. | Hızlandırma: Ctrl+Shift+U | Yavaşlatma: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Hızlandır"
+  },
+  "Speed_down": {
+    "message": "Yavaşlat"
+  },
+  "popupTitle": {
+    "message": "Klavye Kısayolları"
+  },
+  "popupWarning": {
+    "message": "Geçerli kısayollar, temel tarayıcı işlevleriyle veya varsayılan kısayollarla çakışmaları önlemek için değiştirilemez."
+  },
+  "popup-apply-all-message": {
+    "message": "Gelecekteki tüm sekmelerde uygula (video ve ses)"
+  },
+  "popup-apply-tab-message": {
+    "message": "Yalnızca mevcut sekmeye uygula"
+  }
+}

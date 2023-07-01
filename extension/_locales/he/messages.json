@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "האצת קצב שמע/וידאו"
+  },
+  "appDesc": {
+    "message": "מאיץ את ההשמעה/הצגה. משפיע על כל סרטוני ה-HTML5 והשמע. | האצה: Ctrl+Shift+U | האטה: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "האצה"
+  },
+  "Speed_down": {
+    "message": "האטה"
+  },
+  "popupTitle": {
+    "message": "קיצורי מקלדת"
+  },
+  "popupWarning": {
+    "message": "קיצורי המקלדת הנוכחיים אינם ניתנים לשינוי כדי למנוע התנגשויות עם פונקציות חיוניות של הדפדפן או קיצורי מקלדת ברירת המחדל."
+  },
+  "popup-apply-all-message": {
+    "message": "החל על כל כרטיסיות עתידיות עם סרטוני ושמע"
+  },
+  "popup-apply-tab-message": {
+    "message": "החל רק על הכרטיסייה הנוכחית"
+  }
+}

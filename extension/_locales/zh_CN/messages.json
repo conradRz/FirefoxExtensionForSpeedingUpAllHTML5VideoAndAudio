@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "加速音频/视频"
+  },
+  "appDesc": {
+    "message": "加快播放速度。影响所有的HTML5视频和音频。| 加速：Ctrl+Shift+U | 减速：Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "加速"
+  },
+  "Speed_down": {
+    "message": "减速"
+  },
+  "popupTitle": {
+    "message": "键盘快捷键"
+  },
+  "popupWarning": {
+    "message": "当前快捷键不可更改，以避免与浏览器的基本功能或默认快捷键冲突。"
+  },
+  "popup-apply-all-message": {
+    "message": "应用于所有未来的带有视频和音频的标签页"
+  },
+  "popup-apply-tab-message": {
+    "message": "仅应用于当前标签页"
+  }
+}

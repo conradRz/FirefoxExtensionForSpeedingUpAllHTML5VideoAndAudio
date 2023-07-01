@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Garso/vaizdo pagreitinimas"
+  },
+  "appDesc": {
+    "message": "Pagreitina grojimą. Veikia visiems HTML5 vaizdo įrašams ir garso įrašams. | Pagreitinimas: Ctrl+Shift+U | Sulėtinimas: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Pagreitinti"
+  },
+  "Speed_down": {
+    "message": "Sulėtinti"
+  },
+  "popupTitle": {
+    "message": "Klaviatūros sparčiai veikiančios komandos"
+  },
+  "popupWarning": {
+    "message": "Esamos sparčiai veikiančios komandos nekeičiamos, kad išvengtume konfliktų su svarbiausiomis naršyklės funkcijomis arba numatytomis sparčiai veikiančiomis komandomis."
+  },
+  "popup-apply-all-message": {
+    "message": "Taikyti visiems būsimiems skirtukams su vaizdo įrašais ir garso įrašais"
+  },
+  "popup-apply-tab-message": {
+    "message": "Taikyti tik dabartiniam skirtukui"
+  }
+}

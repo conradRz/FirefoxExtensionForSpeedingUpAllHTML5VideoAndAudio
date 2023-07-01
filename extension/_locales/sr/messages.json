@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Ubrazavanje zvuka/video snimaka"
+  },
+  "appDesc": {
+    "message": "Ubrazava reprodukciju. Utice na sve html5 video snimke i audio sadrzaj. | Ubrazavanje: Ctrl+Shift+U | Usporavanje: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Ubrazavanje"
+  },
+  "Speed_down": {
+    "message": "Usporavanje"
+  },
+  "popupTitle": {
+    "message": "Prečice na tastaturi"
+  },
+  "popupWarning": {
+    "message": "Trenutne prečice ne mogu biti promenjene kako bi se izbegli konflikti sa osnovnim funkcijama pretraživača ili podrazumevanim prečicama."
+  },
+  "popup-apply-all-message": {
+    "message": "Primeni na sve buduće kartice sa video i audio sadržajem"
+  },
+  "popup-apply-tab-message": {
+    "message": "Primeni samo na trenutnu karticu"
+  }
+}

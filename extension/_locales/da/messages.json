@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Hastighedsøgning af lyd/video"
+  },
+  "appDesc": {
+    "message": "Øger afspilningshastigheden. Påvirker alle html5-videoer og lyd. | Øg hastigheden: Ctrl+Shift+U | Formindsk hastigheden: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Øg hastigheden"
+  },
+  "Speed_down": {
+    "message": "Formindsk hastigheden"
+  },
+  "popupTitle": {
+    "message": "Tastaturgenveje"
+  },
+  "popupWarning": {
+    "message": "De nuværende genveje kan ikke ændres for at undgå konflikter med essentielle browserfunktioner eller standardgenveje."
+  },
+  "popup-apply-all-message": {
+    "message": "Anvend på alle fremtidige faner med video og lyd"
+  },
+  "popup-apply-tab-message": {
+    "message": "Anvend kun på den aktuelle fane"
+  }
+}
