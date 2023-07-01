@@ -56,7 +56,7 @@ let currentUrl = ''
 
 /**
   * This function will be called periodically.
-  * Check if the URL has changed, as changed URL, doesn't mean that the content script is reloaded.
+  * Check if the URL has changed, as changed URL, doesn't mean that the content script is reloaded. Popstate and hashchange event listeners don't fire or url change
   */
 const init = async () => {
   const newUrl = location.href
@@ -66,7 +66,7 @@ const init = async () => {
         browser.storage.local.get({ lastPlaybackRate: 1 }).then(data => {
           const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
           if (lastPlaybackRate !== 1) {
-            const newPlaybackRate = Math.max(lastPlaybackRate - 1, 0);
+            const newPlaybackRate = lastPlaybackRate - 1;
             updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
           }
         });
