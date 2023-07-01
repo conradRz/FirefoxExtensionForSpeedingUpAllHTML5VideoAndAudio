@@ -64,7 +64,7 @@ const init = async () => {
     browser.storage.local.get({ selectedOption: "all" }).then(result => {
       if (result.selectedOption === "all") {
         browser.storage.local.get({ lastPlaybackRate: 1 }).then(data => {
-          const lastPlaybackRate = parseFloat(data.lastPlaybackRate);
+          const lastPlaybackRate = data.lastPlaybackRate;
           if (lastPlaybackRate !== 1) {
             const newPlaybackRate = lastPlaybackRate - 1;
             updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
