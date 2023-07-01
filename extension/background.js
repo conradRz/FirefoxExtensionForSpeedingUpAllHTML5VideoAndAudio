@@ -1,8 +1,8 @@
 browser.commands.onCommand.addListener(function (command) {
   if (command == "video-speed-up") {
-    speedUp025();
+    sendCommandToContentScript("speedUp025");
   } else if (command == "video-speed-down") {
-    slowDown025();
+    sendCommandToContentScript("slowDown025");
   }
 });
 
@@ -13,23 +13,15 @@ browser.runtime.onMessage.addListener(function (request) {
   }
 });
 
-function speedUp025() {
+function sendCommandToContentScript(commandName) {
   browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
-    sendMessageToContentScript(tabs[0].id, { command: "speedUp025" })
-      .then(response => setIconBadgeTextFromValue(tabs[0].id, response));
-  });
-}
-
-function slowDown025() {
-  browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
-    sendMessageToContentScript(tabs[0].id, { command: "slowDown025" })
+    sendMessageToContentScript(tabs[0].id, { command: commandName })
       .then(response => setIconBadgeTextFromValue(tabs[0].id, response));
   });
 }
 
 function setIconBadgeTextFromValue(tabId, value) {
-  const formattedStringToSet = !isNaN(value) ? (Math.round(value * 100) / 100).toString() : "";
-  browser.browserAction.setBadgeText({ text: formattedStringToSet, tabId: tabId });
+  browser.browserAction.setBadgeText({ text: value, tabId: tabId });
 }
 
 function sendMessageToContentScript(tabId, message) {
