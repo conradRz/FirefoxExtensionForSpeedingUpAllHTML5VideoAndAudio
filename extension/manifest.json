@@ -33,16 +33,7 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": [
-    "contextMenus",
-    "tabs",
-    "<all_urls>",
-    "http://*/*",
-    "https://*/*",
-    "file:///*/*",
-    "webNavigation",
-    "storage"
-  ],
+  "permissions": ["tabs", "storage"],
   "commands": {
     "video-speed-up": {
       "suggested_key": {
