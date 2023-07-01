@@ -1,55 +1,42 @@
 browser.runtime.onMessage.addListener(function (request) {
   switch (request.command) {
     case "speedUp025":
-      return updateElementPlaybackRate(0.25); //even though they return nothing, without "return" it won't work here, oddly enough, and don't want to do break statement
+      return updateElementsPlaybackRate(0.25); //even though they return nothing, without "return" it won't work here, oddly enough, and don't want to do break statement
     case "slowDown025":
-      return updateElementPlaybackRate(-0.25);
+      return updateElementsPlaybackRate(-0.25);
   }
 });
 
-function updateElementPlaybackRate(changeValue) {
+function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
   return new Promise(function (resolve) {
-    const element = getCurrentlyPlayingElement();
+    const elements = document.querySelectorAll("video, audio");
 
-    if (!element) {
+    if (elements.length === 0) {
       resolve();
       return;
     }
 
-    const currentPlaybackRate = element.playbackRate;
+    const currentPlaybackRate = elements[0].playbackRate;
     const newPlaybackRate = currentPlaybackRate + changeValue;
 
-    if (newPlaybackRate < 0.75) {
-      resolve(currentPlaybackRate);
-      return;
+    for (const element of elements) {
+      element.playbackRate = newPlaybackRate;
     }
 
-    element.playbackRate = newPlaybackRate;
-
-    // Store newPlaybackRate
-    browser.storage.local.set({ lastPlaybackRate: newPlaybackRate })
-      .then(() => {
-        resolve(newPlaybackRate);
-      })
-      .catch(error => {
-        console.error("Error storing playback rate:", error);
-        resolve(newPlaybackRate);
-      });
+    if (wasThisCalledOnPageLoad) {
+      resolve(newPlaybackRate);
+    } else {
+      // Store newPlaybackRate
+      browser.storage.local.set({ lastPlaybackRate: newPlaybackRate })
+        .then(() => {
+          resolve(newPlaybackRate);
+        })
+        .catch(error => {
+          console.error("Error storing playback rate:", error);
+          resolve(newPlaybackRate);
+        });
+    }
   });
-}
-
-function getCurrentlyPlayingElement() {
-  const elements = document.querySelectorAll("video, audio");
-  let lastActiveElement = elements[0]
-
-  for (let element of elements) {
-    if (!element.paused) {
-      lastActiveElement = element;
-      return element;
-    }
-  }
-
-  return lastActiveElement;
 }
 
 let currentUrl = ''
@@ -67,7 +54,7 @@ const init = async () => {
           const lastPlaybackRate = data.lastPlaybackRate;
           if (lastPlaybackRate !== 1) {
             const newPlaybackRate = lastPlaybackRate - 1;
-            updateElementPlaybackRate(newPlaybackRate).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
+            updateElementsPlaybackRate(newPlaybackRate, true).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
           }
         });
       }
