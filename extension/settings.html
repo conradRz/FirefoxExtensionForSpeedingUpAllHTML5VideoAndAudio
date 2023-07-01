@@ -31,16 +31,16 @@
     </style>
   </head>
   <body>
-    <h1>Keyboard Shortcuts</h1>
+    <h1 id="popupTitle"></h1>
     <ul id="shortcut-list"></ul>
 
-    <p class="warning">Current shortcuts are non-changeable to avoid conflicts with essential browser functions or default shortcuts.</p>
+    <p class="warning" id="popupWarning"></p>
     
     <form>
       <input type="radio" id="apply-all" name="speed-option" value="all" checked>
-      <label for="apply-all">Apply to all future tabs with video and audio</label><br>
+      <label for="apply-all" id="popup-apply-all-message"></label><br>
       <input type="radio" id="apply-tab" name="speed-option" value="tab">
-      <label for="apply-tab">Apply to the current tab only</label><br>
+      <label for="apply-tab" id="popup-apply-tab-message"></label><br>
     </form>
 
     <script src="settings.js"></script>

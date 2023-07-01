@@ -56,7 +56,7 @@ const init = async () => {
           elements = document.querySelectorAll("video, audio");
           const hasPlaybackRateOne = Array.from(elements).some(element => element.playbackRate === 1);
 
-          if (hasPlaybackRateOne) {
+          if (hasPlaybackRateOne) { //that means there is at least one new element which has the default playback speed, so we need to sped it up
             const changePlaybackByRate = lastPlaybackRate - 1;
             updateElementsPlaybackRate(changePlaybackByRate, true).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
           }
