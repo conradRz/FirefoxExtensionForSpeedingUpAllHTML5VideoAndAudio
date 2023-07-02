@@ -19,11 +19,20 @@ function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false
       return;
     }
 
-    const currentPlaybackRate = elements[0].playbackRate;
-    newPlaybackRate = currentPlaybackRate + changeValue;
+    if (wasThisCalledOnPageLoad) {
+      newPlaybackRate = changeValue + 1;
 
-    for (const element of elements) {
-      element.playbackRate = newPlaybackRate;
+      for (const element of elements) {
+        element.playbackRate = newPlaybackRate;
+      }
+
+    } else {
+      const currentPlaybackRate = elements[0].playbackRate;
+      newPlaybackRate = currentPlaybackRate + changeValue;
+
+      for (const element of elements) {
+        element.playbackRate = newPlaybackRate;
+      }
     }
 
     if (wasThisCalledOnPageLoad) {
