@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     applyTabRadio.addEventListener("change", function () {
         browser.storage.local.set({ selectedOption: "tab" });
         browser.storage.local.remove('lastPlaybackRate') //potentially, keep that here, to prevent unintended behaviour, upon reselecting the "all" option
+
+        setIconBadgeTextFromValue(null, null);
     });
 
     // Retrieve the current keyboard shortcuts
@@ -45,3 +47,7 @@ document.getElementById('popupTitle').textContent = browser.i18n.getMessage('pop
 document.getElementById('popupWarning').textContent = browser.i18n.getMessage('popupWarning');
 document.getElementById('popup-apply-all-message').textContent = browser.i18n.getMessage('popup-apply-all-message');
 document.getElementById('popup-apply-tab-message').textContent = browser.i18n.getMessage('popup-apply-tab-message');
+
+function setIconBadgeTextFromValue(tabId, value) {
+    browser.browserAction.setBadgeText({ text: value ? value.toString() : "", tabId: tabId });
+}
