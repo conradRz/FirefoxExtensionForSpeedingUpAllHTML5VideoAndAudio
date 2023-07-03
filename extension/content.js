@@ -8,10 +8,10 @@ browser.runtime.onMessage.addListener(function (request) {
 });
 
 let elements;
-let newPlaybackRate;
+let newPlaybackRate = 1;
 
 function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
-  return new Promise(function (resolve) {
+  return new Promise(async function (resolve) {
     elements = document.querySelectorAll("video, audio");
 
     if (elements.length === 0) {
@@ -21,18 +21,13 @@ function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false
 
     if (wasThisCalledOnPageLoad) {
       newPlaybackRate = changeValue + 1;
-
-      for (const element of elements) {
-        element.playbackRate = newPlaybackRate;
-      }
-
     } else {
-      const currentPlaybackRate = elements[0].playbackRate;
-      newPlaybackRate = currentPlaybackRate + changeValue;
+      const storageData = await browser.storage.local.get({ lastPlaybackRate: 1 });
+      newPlaybackRate = storageData.lastPlaybackRate + changeValue;
+    }
 
-      for (const element of elements) {
-        element.playbackRate = newPlaybackRate;
-      }
+    for (const element of elements) {
+      element.playbackRate = newPlaybackRate;
     }
 
     if (wasThisCalledOnPageLoad) {
