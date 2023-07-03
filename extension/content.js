@@ -10,41 +10,35 @@ browser.runtime.onMessage.addListener(function (request) {
 let elements;
 let newPlaybackRate = 1;
 
-function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
-  return new Promise(async function (resolve) {
-    elements = document.querySelectorAll("video, audio");
+async function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
+  elements = document.querySelectorAll("video, audio");
 
-    if (elements.length === 0) {
-      resolve("");
-      return;
-    }
+  if (elements.length === 0) {
+    return "";
+  }
 
-    if (wasThisCalledOnPageLoad) {
-      newPlaybackRate = changeValue + 1;
-    } else {
-      const storageData = await browser.storage.local.get({ lastPlaybackRate: 1 });
-      newPlaybackRate = storageData.lastPlaybackRate + changeValue;
-    }
+  if (wasThisCalledOnPageLoad) {
+    newPlaybackRate = changeValue + 1;
+  } else {
+    const storageData = await browser.storage.local.get({ lastPlaybackRate: 1 });
+    newPlaybackRate = storageData.lastPlaybackRate + changeValue;
+  }
 
-    for (const element of elements) {
-      element.playbackRate = newPlaybackRate;
-    }
+  for (const element of elements) {
+    element.playbackRate = newPlaybackRate;
+  }
 
-    if (wasThisCalledOnPageLoad) {
-      resolve(newPlaybackRate);
-    } else {
-      // Store newPlaybackRate
-      browser.storage.local.set({ lastPlaybackRate: newPlaybackRate })
-        .then(() => {
-          resolve(newPlaybackRate);
-        })
-        .catch(error => {
-          console.error("Error storing playback rate:", error);
-          resolve(newPlaybackRate);
-        });
+  if (!wasThisCalledOnPageLoad) {
+    try {
+      await browser.storage.local.set({ lastPlaybackRate: newPlaybackRate });
+    } catch (error) {
+      console.error("Error storing playback rate:", error);
     }
-  });
+  }
+
+  return newPlaybackRate;
 }
+
 
 /**
   * This function will be called periodically.
