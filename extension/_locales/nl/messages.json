@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Audio/video versnellen"
+  },
+  "appDesc": {
+    "message": "Versnelt het afspelen. Beïnvloedt alle html5 video's en audio. | Versnellen: Ctrl+Shift+U | Versnellen: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Versnel"
+  },
+  "Speed_down": {
+    "message": "Versnellen"
+  },
+  "popupTitle": {
+    "message": "Sneltoetsen"
+  },
+  "popupWarning": {
+    "message": "Huidige snelkoppelingen kunnen niet worden gewijzigd om conflicten met essentiële browserfuncties of standaardsnelkoppelingen te voorkomen."
+  },
+  "popup-apply-all-message": {
+    "message": "Toepassen op alle toekomstige tabbladen met video en audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Alleen toepassen op het huidige tabblad"
+  }
+}

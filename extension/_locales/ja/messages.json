@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "オーディオ/ビデオのスピードアップ"
+  },
+  "appDesc": {
+    "message": "再生速度を高速化します。すべてのHTML5ビデオとオーディオに影響します。 | スピードアップ：Ctrl+Shift+U | スピードダウン：Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "スピードアップ"
+  },
+  "Speed_down": {
+    "message": "スピードダウン"
+  },
+  "popupTitle": {
+    "message": "キーボードショートカット"
+  },
+  "popupWarning": {
+    "message": "重要なブラウザ機能やデフォルトのショートカットとの競合を避けるため、現在のショートカットは変更できません。"
+  },
+  "popup-apply-all-message": {
+    "message": "すべての将来のタブに適用する"
+  },
+  "popup-apply-tab-message": {
+    "message": "現在のタブのみに適用する"
+  }
+}

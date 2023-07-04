@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Snabbspola för ljud/video"
+  },
+  "appDesc": {
+    "message": "Snabbspolar uppspelningen. Påverkar alla html5-videor och ljud. | Snabbspola upp: Ctrl+Shift+U | Snabbspola ned: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Snabbspola upp"
+  },
+  "Speed_down": {
+    "message": "Snabbspola ned"
+  },
+  "popupTitle": {
+    "message": "Tangentbordsgenvägar"
+  },
+  "popupWarning": {
+    "message": "Nuvarande genvägar går inte att ändra för att undvika konflikter med viktiga webbläsarfunktioner eller standardgenvägar."
+  },
+  "popup-apply-all-message": {
+    "message": "Tillämpa på alla framtida flikar med video och ljud"
+  },
+  "popup-apply-tab-message": {
+    "message": "Tillämpa endast på aktuell flik"
+  }
+}

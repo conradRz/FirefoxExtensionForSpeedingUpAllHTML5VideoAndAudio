@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "የድምጽ/የቪዲዮ ቀጥታ በጣም አድርገሽ"
+  },
+  "appDesc": {
+    "message": "ሙሉነትን በጣም እንዴት ይቀጥባል። ሁሉንም html5 ቪዲዮዎችና ድምጽ በጣም ይቀጥባል። | የቀጥታ አድራሻ: Ctrl+Shift+U | የቀጥታ አድራሻ: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "የቀጥታ አድራሻ"
+  },
+  "Speed_down": {
+    "message": "የቀጥታ ውድቀት"
+  },
+  "popupTitle": {
+    "message": "የመልስ ቁልፍ ኮድ"
+  },
+  "popupWarning": {
+    "message": "የተጠበሰ ቁልፍ እንዴት ያለውን የድረገጽ እና ነጥብ ቁልፍዎን የማይቀየር ለመደበኛ አድራሻዎት መቀጠል እንዳይፈቀድ አድርግሻለሁ."
+  },
+  "popup-apply-all-message": {
+    "message": "በቅድመ ታብሎት በሚከተለው ቲብ እና ድምጽ ላይ ተጠቀምን"
+  },
+  "popup-apply-tab-message": {
+    "message": "በአካላዊ ቲብ ብቻ ተጠቀምን"
+  }
+}

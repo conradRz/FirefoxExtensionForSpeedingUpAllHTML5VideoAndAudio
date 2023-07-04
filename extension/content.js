@@ -8,39 +8,38 @@ browser.runtime.onMessage.addListener(function (request) {
 });
 
 let elements;
-let newPlaybackRate;
+let newPlaybackRate = 1;
 
-function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
-  return new Promise(function (resolve) {
-    elements = document.querySelectorAll("video, audio");
+async function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad = false) {
+  elements = document.querySelectorAll("video, audio");
 
-    if (elements.length === 0) {
-      resolve("");
-      return;
+  if (elements.length === 0) {
+    return "";
+  }
+
+  if (wasThisCalledOnPageLoad) {
+    newPlaybackRate = changeValue + 1;
+  } else {
+    const storageData = await browser.storage.local.get({ lastPlaybackRate: 1 });
+    newPlaybackRate = storageData.lastPlaybackRate + changeValue;
+  }
+
+  for (const element of elements) {
+    element.playbackRate = newPlaybackRate;
+  }
+
+  if (!wasThisCalledOnPageLoad) {
+    try {
+      await browser.storage.local.set({ lastPlaybackRate: newPlaybackRate });
+    } catch (error) {
+      console.error("Error storing playback rate:", error);
     }
+  }
 
-    const currentPlaybackRate = elements[0].playbackRate;
-    newPlaybackRate = currentPlaybackRate + changeValue;
-
-    for (const element of elements) {
-      element.playbackRate = newPlaybackRate;
-    }
-
-    if (wasThisCalledOnPageLoad) {
-      resolve(newPlaybackRate);
-    } else {
-      // Store newPlaybackRate
-      browser.storage.local.set({ lastPlaybackRate: newPlaybackRate })
-        .then(() => {
-          resolve(newPlaybackRate);
-        })
-        .catch(error => {
-          console.error("Error storing playback rate:", error);
-          resolve(newPlaybackRate);
-        });
-    }
-  });
+  return newPlaybackRate;
 }
+
+let firstRun = true;
 
 /**
   * This function will be called periodically.
@@ -56,12 +55,15 @@ const init = async () => {
           elements = document.querySelectorAll("video, audio");
           const hasPlaybackRateOne = Array.from(elements).some(element => element.playbackRate === 1);
 
-          if (hasPlaybackRateOne) {
+          if (hasPlaybackRateOne) { //that means there is at least one new element which has the default playback speed, so we need to sped it up
             const changePlaybackByRate = lastPlaybackRate - 1;
             updateElementsPlaybackRate(changePlaybackByRate, true).then(response => browser.runtime.sendMessage({ command: "updateBadgeText", value: response }));
           }
         }
       });
+    } else if (firstRun) {
+      browser.runtime.sendMessage({ command: "updateBadgeText", value: null, tabId: "currentTab" });
+      firstRun = false;
     }
   });
   // Call periodically again

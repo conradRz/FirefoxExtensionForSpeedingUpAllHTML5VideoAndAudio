@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Accelerador d'àudio/vídeo"
+  },
+  "appDesc": {
+    "message": "Accelerar la reproducció. Afecta tots els vídeos i àudios HTML5. | Accelerar: Ctrl+Shift+U | Reduir la velocitat: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Accelerar"
+  },
+  "Speed_down": {
+    "message": "Reduir la velocitat"
+  },
+  "popupTitle": {
+    "message": "Dreceres de teclat"
+  },
+  "popupWarning": {
+    "message": "Les dreceres actuals no es poden canviar per evitar conflictes amb funcions essencials del navegador o dreceres per defecte."
+  },
+  "popup-apply-all-message": {
+    "message": "Aplicar a totes les pestanyes futures amb vídeo i àudio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Aplicar només a la pestanya actual"
+  }
+}

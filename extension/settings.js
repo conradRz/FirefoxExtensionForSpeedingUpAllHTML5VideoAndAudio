@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve the last selected option from storage
     browser.storage.local.get("selectedOption").then(function (result) {
-        let selectedOption = result.selectedOption || "tab";
+        let selectedOption = result.selectedOption || "all";
 
         // Set the selected option based on the retrieved value
         let applyAllRadio = document.getElementById("apply-all");
@@ -40,3 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.getElementById('popupTitle').textContent = browser.i18n.getMessage('popupTitle');
+document.getElementById('popupWarning').textContent = browser.i18n.getMessage('popupWarning');
+document.getElementById('popup-apply-all-message').textContent = browser.i18n.getMessage('popup-apply-all-message');
+document.getElementById('popup-apply-tab-message').textContent = browser.i18n.getMessage('popup-apply-tab-message');

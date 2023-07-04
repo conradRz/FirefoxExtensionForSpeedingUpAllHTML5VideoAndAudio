@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Acelerador de Audio/Video"
+  },
+  "appDesc": {
+    "message": "Acelera la reproducción. Afecta a todos los videos y audios en formato html5. | Acelerar: Ctrl+Shift+U | Desacelerar: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Acelerar"
+  },
+  "Speed_down": {
+    "message": "Desacelerar"
+  },
+  "popupTitle": {
+    "message": "Atajos de Teclado"
+  },
+  "popupWarning": {
+    "message": "Los atajos actuales no se pueden cambiar para evitar conflictos con funciones esenciales del navegador o atajos predeterminados."
+  },
+  "popup-apply-all-message": {
+    "message": "Aplicar a todas las pestañas futuras con video y audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Aplicar solo a la pestaña actual"
+  }
+}

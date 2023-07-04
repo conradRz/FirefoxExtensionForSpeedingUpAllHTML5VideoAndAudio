@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Pabilisin ang Audio/Video"
+  },
+  "appDesc": {
+    "message": "Pabilisin ang pag-playback. Epekto sa lahat ng html5 na mga bidyo at audio. | Pabilisin: Ctrl+Shift+U | Bagal: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Pabilisin"
+  },
+  "Speed_down": {
+    "message": "Bagalan"
+  },
+  "popupTitle": {
+    "message": "Mga Shortcut ng Keyboard"
+  },
+  "popupWarning": {
+    "message": "Ang mga kasalukuyang shortcut ay hindi mababago upang maiwasan ang mga conflict sa mahahalagang gawain ng browser o default na shortcut."
+  },
+  "popup-apply-all-message": {
+    "message": "Gamitin sa lahat ng hinaharap na mga tab na may bidyo at audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Gamitin lamang sa kasalukuyang tab"
+  }
+}

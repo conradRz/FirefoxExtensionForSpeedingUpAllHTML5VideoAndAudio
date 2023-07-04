@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Ongeza Kasi ya Sauti/Video"
+  },
+  "appDesc": {
+    "message": "Inapunguza muda wa kucheza. Inaathiri video na sauti zote za html5. | Ongeza kasi: Ctrl+Shift+U | Punguza kasi: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Ongeza kasi"
+  },
+  "Speed_down": {
+    "message": "Punguza kasi"
+  },
+  "popupTitle": {
+    "message": "Vitenzi vya Kibodi"
+  },
+  "popupWarning": {
+    "message": "Vitenzi vya sasa havibadilishwi ili kuepuka mizozo na kazi muhimu ya kivinjari au vitenzi vya msingi."
+  },
+  "popup-apply-all-message": {
+    "message": "Tumia kwa vijipindi vyote vijavyo na video na sauti"
+  },
+  "popup-apply-tab-message": {
+    "message": "Tumia kwa kijipindi cha sasa pekee"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Lajukan Audio/Video"
+  },
+  "appDesc": {
+    "message": "Mempercepat pemutaran. Mempengaruhi semua video dan audio html5. | Laju naik: Ctrl+Shift+U | Laju turun: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Laju naik"
+  },
+  "Speed_down": {
+    "message": "Laju turun"
+  },
+  "popupTitle": {
+    "message": "Pintasan Papan Kekunci"
+  },
+  "popupWarning": {
+    "message": "Pintasan semasa tidak boleh diubah untuk mengelakkan konflik dengan fungsi penting pelayar atau pintasan lalai."
+  },
+  "popup-apply-all-message": {
+    "message": "Gunakan pada semua tab akan datang dengan video dan audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Gunakan pada tab semasa sahaja"
+  }
+}

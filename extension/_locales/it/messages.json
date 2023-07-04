@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Accelerazione Audio/Video"
+  },
+  "appDesc": {
+    "message": "Velocizza la riproduzione. Influisce su tutti i video e audio HTML5. | Velocità aumentata: Ctrl+Shift+U | Velocità diminuita: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Aumenta velocità"
+  },
+  "Speed_down": {
+    "message": "Diminuisci velocità"
+  },
+  "popupTitle": {
+    "message": "Scorciatoie da tastiera"
+  },
+  "popupWarning": {
+    "message": "Le scorciatoie attuali non possono essere modificate per evitare conflitti con funzioni essenziali del browser o scorciatoie predefinite."
+  },
+  "popup-apply-all-message": {
+    "message": "Applica a tutte le schede future con video e audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Applica solo alla scheda corrente"
+  }
+}

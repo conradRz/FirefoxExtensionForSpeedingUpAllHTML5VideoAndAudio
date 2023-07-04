@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Hang- / Videógyorsítás"
+  },
+  "appDesc": {
+    "message": "A lejátszás gyorsítása. Hatással van minden HTML5 videóra és hangra. | Gyorsítás: Ctrl+Shift+U | Lassítás: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Gyorsítás"
+  },
+  "Speed_down": {
+    "message": "Lassítás"
+  },
+  "popupTitle": {
+    "message": "Billentyűparancsok"
+  },
+  "popupWarning": {
+    "message": "Az aktuális billentyűparancsok nem módosíthatóak, hogy elkerüljék a konfliktusokat az alapvető böngészőfunkciókkal vagy az alapértelmezett billentyűparancsokkal."
+  },
+  "popup-apply-all-message": {
+    "message": "Alkalmazás minden jövőbeli fülön videóval és hanggal"
+  },
+  "popup-apply-tab-message": {
+    "message": "Csak az aktuális fülön alkalmazása"
+  }
+}

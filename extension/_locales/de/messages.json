@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Audio-/Video-Beschleunigung"
+  },
+  "appDesc": {
+    "message": "Beschleunigt die Wiedergabe. Wirkt sich auf alle HTML5-Videos und Audio aus. | Beschleunigen: Strg+Umschalt+U | Verlangsamen: Strg+Umschalt+Y"
+  },
+  "Speed_up": {
+    "message": "Beschleunigen"
+  },
+  "Speed_down": {
+    "message": "Verlangsamen"
+  },
+  "popupTitle": {
+    "message": "Tastaturkürzel"
+  },
+  "popupWarning": {
+    "message": "Aktuelle Tastenkombinationen können nicht geändert werden, um Konflikte mit wesentlichen Browserfunktionen oder Standardkürzeln zu vermeiden."
+  },
+  "popup-apply-all-message": {
+    "message": "Auf alle zukünftigen Tabs mit Video und Audio anwenden"
+  },
+  "popup-apply-tab-message": {
+    "message": "Nur auf den aktuellen Tab anwenden"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Pohitri zvok/sliko"
+  },
+  "appDesc": {
+    "message": "Pohitri predvajanje. Vpliva na vse HTML5 videoposnetke in zvočne posnetke. | Pohitri: Ctrl+Shift+U | Upočasni: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Pohitri"
+  },
+  "Speed_down": {
+    "message": "Upočasni"
+  },
+  "popupTitle": {
+    "message": "Tipkovni bližnjice"
+  },
+  "popupWarning": {
+    "message": "Trenutne bližnjice ni mogoče spremeniti, da se prepreči konflikt s pomembnimi funkcijami brskalnika ali privzetimi bližnjicami."
+  },
+  "popup-apply-all-message": {
+    "message": "Uporabi za vse prihodnje zavihke s videoposnetki in zvočnimi posnetki"
+  },
+  "popup-apply-tab-message": {
+    "message": "Uporabi samo za trenutni zavihek"
+  }
+}

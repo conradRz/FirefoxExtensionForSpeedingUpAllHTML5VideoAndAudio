@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Audio/Video Speed Up",
+  "name": "__MSG_appName__",
   "version": "1.6",
-  "description": "Speeds up playback. Affects all html5 videos and audio. | Speed up: Ctrl+Shift+U | Speed down: Ctrl+Shift+Y",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
   "icons": {
     "128": "icon128.png"
   },
@@ -40,14 +41,14 @@
         "default": "Ctrl+Shift+U",
         "mac": "Command+Shift+U"
       },
-      "description": "Speed up"
+      "description": "__MSG_Speed_up__"
     },
     "video-speed-down": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y"
       },
-      "description": "Speed down"
+      "description": "__MSG_Speed_down__"
     }
   }
 }

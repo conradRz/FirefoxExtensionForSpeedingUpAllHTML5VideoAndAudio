@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "음성/영상 빠르게 재생"
+  },
+  "appDesc": {
+    "message": "재생 속도를 빠르게 합니다. 모든 HTML5 비디오와 오디오에 영향을 미칩니다. | 빠르게 재생: Ctrl+Shift+U | 느리게 재생: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "빠르게"
+  },
+  "Speed_down": {
+    "message": "느리게"
+  },
+  "popupTitle": {
+    "message": "키보드 단축키"
+  },
+  "popupWarning": {
+    "message": "기본 브라우저 기능 또는 기본 단축키와 충돌을 피하기 위해 현재 단축키는 변경할 수 없습니다."
+  },
+  "popup-apply-all-message": {
+    "message": "모든 향후 탭의 비디오와 오디오에 적용"
+  },
+  "popup-apply-tab-message": {
+    "message": "현재 탭에만 적용"
+  }
+}

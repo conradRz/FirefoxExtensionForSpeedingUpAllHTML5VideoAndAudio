@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Audio/Video Speed Up"
+  },
+  "appDesc": {
+    "message": "Speeds up playback. Affects all HTML 5 videos and audio. | Speed up: Ctrl+Shift+U | Speed down: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Speed up"
+  },
+  "Speed_down": {
+    "message": "Speed down"
+  },
+  "popupTitle": {
+    "message": "Keyboard Shortcuts"
+  },
+  "popupWarning": {
+    "message": "Current shortcuts are non-changeable to avoid conflicts with essential browser functions or default shortcuts."
+  },
+  "popup-apply-all-message": {
+    "message": "Apply to all future tabs with video and audio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Apply to the current tab only"
+  }
+}

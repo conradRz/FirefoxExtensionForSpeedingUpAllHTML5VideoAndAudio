@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Aumento de velocidade de áudio/vídeo"
+  },
+  "appDesc": {
+    "message": "Acelera a reprodução. Afeta todos os vídeos e áudio html5. | Acelerar: Ctrl+Shift+U | Diminuir velocidade: Ctrl+Shift+Y"
+  },
+  "Speed_up": {
+    "message": "Acelerar"
+  },
+  "Speed_down": {
+    "message": "Diminua a velocidade"
+  },
+  "popupTitle": {
+    "message": "Atalhos de teclado"
+  },
+  "popupWarning": {
+    "message": "Os atalhos atuais não podem ser alterados para evitar conflitos com funções essenciais do navegador ou atalhos padrão."
+  },
+  "popup-apply-all-message": {
+    "message": "Aplicar a todas as guias futuras com vídeo e áudio"
+  },
+  "popup-apply-tab-message": {
+    "message": "Aplicar apenas à guia atual"
+  }
+}
