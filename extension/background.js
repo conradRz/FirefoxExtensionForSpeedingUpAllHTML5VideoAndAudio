@@ -8,7 +8,7 @@ browser.commands.onCommand.addListener(function (command) {
 
 browser.runtime.onMessage.addListener(function (request) {
   if (request.command === "updateBadgeText") {
-    const { value, tabId } = request;
+    let { value, tabId } = request;
     if (tabId == "currentTab") {
       browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
         tabId = tabs[0].id;

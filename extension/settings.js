@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve the last selected option from storage
     browser.storage.local.get("selectedOption").then(function (result) {
-        let selectedOption = result.selectedOption || "tab";
+        let selectedOption = result.selectedOption || "all";
 
         // Set the selected option based on the retrieved value
         let applyAllRadio = document.getElementById("apply-all");
