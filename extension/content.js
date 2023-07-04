@@ -39,6 +39,7 @@ async function updateElementsPlaybackRate(changeValue, wasThisCalledOnPageLoad =
   return newPlaybackRate;
 }
 
+let firstRun = true;
 
 /**
   * This function will be called periodically.
@@ -60,6 +61,9 @@ const init = async () => {
           }
         }
       });
+    } else if (firstRun) {
+      browser.runtime.sendMessage({ command: "updateBadgeText", value: null, tabId: "currentTab" });
+      firstRun = false;
     }
   });
   // Call periodically again
