@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Vitenzi vya Kibodi"
   },
-  "popupWarning": {
-    "message": "Vitenzi vya sasa havibadilishwi ili kuepuka mizozo na kazi muhimu ya kivinjari au vitenzi vya msingi."
+  "popupInfo": {
+    "message": "Jinsi ya kubadilisha njia za mkato"
   },
   "popup-apply-all-message": {
     "message": "Tumia kwa vijipindi vyote vijavyo na video na sauti"

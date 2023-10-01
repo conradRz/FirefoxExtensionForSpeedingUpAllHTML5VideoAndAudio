@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Phím tắt"
   },
-  "popupWarning": {
-    "message": "Các phím tắt hiện tại không thể thay đổi để tránh xung đột với các chức năng trình duyệt cần thiết hoặc các phím tắt mặc định."
+  "popupInfo": {
+    "message": "Cách thay đổi phím tắt"
   },
   "popup-apply-all-message": {
     "message": "Áp dụng cho tất cả tab tương lai có video và âm thanh"

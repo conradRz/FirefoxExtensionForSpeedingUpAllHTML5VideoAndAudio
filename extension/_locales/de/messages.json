@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Tastaturkürzel"
   },
-  "popupWarning": {
-    "message": "Aktuelle Tastenkombinationen können nicht geändert werden, um Konflikte mit wesentlichen Browserfunktionen oder Standardkürzeln zu vermeiden."
+  "popupInfo": {
+    "message": "So ändern Sie die Verknüpfungen"
   },
   "popup-apply-all-message": {
     "message": "Auf alle zukünftigen Tabs mit Video und Audio anwenden"

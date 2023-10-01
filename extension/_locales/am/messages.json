@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "የመልስ ቁልፍ ኮድ"
   },
-  "popupWarning": {
-    "message": "የተጠበሰ ቁልፍ እንዴት ያለውን የድረገጽ እና ነጥብ ቁልፍዎን የማይቀየር ለመደበኛ አድራሻዎት መቀጠል እንዳይፈቀድ አድርግሻለሁ."
+  "popupInfo": {
+    "message": "አቋራጮችን እንዴት እንደሚቀይሩ"
   },
   "popup-apply-all-message": {
     "message": "በቅድመ ታብሎት በሚከተለው ቲብ እና ድምጽ ላይ ተጠቀምን"

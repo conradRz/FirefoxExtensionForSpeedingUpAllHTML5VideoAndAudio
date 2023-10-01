@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Klaviatūros sparčiai veikiančios komandos"
   },
-  "popupWarning": {
-    "message": "Esamos sparčiai veikiančios komandos nekeičiamos, kad išvengtume konfliktų su svarbiausiomis naršyklės funkcijomis arba numatytomis sparčiai veikiančiomis komandomis."
+  "popupInfo": {
+    "message": "Kaip pakeisti sparčiuosius klavišus"
   },
   "popup-apply-all-message": {
     "message": "Taikyti visiems būsimiems skirtukams su vaizdo įrašais ir garso įrašais"

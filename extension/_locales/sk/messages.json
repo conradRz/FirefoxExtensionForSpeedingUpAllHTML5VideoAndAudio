@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Klávesové skratky"
   },
-  "popupWarning": {
-    "message": "Aktuálne skratky nie je možné zmeniť, aby sa predišlo konfliktom so základnými funkciami prehliadača alebo predvolenými skratkami."
+  "popupInfo": {
+    "message": "Ako zmeniť skratky"
   },
   "popup-apply-all-message": {
     "message": "Použiť na všetky budúce karty s videom a zvukom"

@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Klaviatuuri otseteed"
   },
-  "popupWarning": {
-    "message": "Praegused otseteed ei ole muudetavad, et vältida konflikte oluliste brauserifunktsioonide või vaikeseadistuse otseteedega."
+  "popupInfo": {
+    "message": "Kuidas otseteid muuta"
   },
   "popup-apply-all-message": {
     "message": "Rakenda kõikidele tulevastele vahekaartidele, millel on video ja heli"

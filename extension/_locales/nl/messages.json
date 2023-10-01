@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Sneltoetsen"
   },
-  "popupWarning": {
-    "message": "Huidige snelkoppelingen kunnen niet worden gewijzigd om conflicten met essentiële browserfuncties of standaardsnelkoppelingen te voorkomen."
+  "popupInfo": {
+    "message": "Hoe u de snelkoppelingen kunt wijzigen"
   },
   "popup-apply-all-message": {
     "message": "Toepassen op alle toekomstige tabbladen met video en audio"

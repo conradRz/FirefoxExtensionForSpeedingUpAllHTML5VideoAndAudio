@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Scorciatoie da tastiera"
   },
-  "popupWarning": {
-    "message": "Le scorciatoie attuali non possono essere modificate per evitare conflitti con funzioni essenziali del browser o scorciatoie predefinite."
+  "popupInfo": {
+    "message": "Come modificare le scorciatoie"
   },
   "popup-apply-all-message": {
     "message": "Applica a tutte le schede future con video e audio"

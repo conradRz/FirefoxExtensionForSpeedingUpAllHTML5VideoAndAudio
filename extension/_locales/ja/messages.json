@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "キーボードショートカット"
   },
-  "popupWarning": {
-    "message": "重要なブラウザ機能やデフォルトのショートカットとの競合を避けるため、現在のショートカットは変更できません。"
+  "popupInfo": {
+    "message": "ショートカットを変更する方法"
   },
   "popup-apply-all-message": {
     "message": "すべての将来のタブに適用する"

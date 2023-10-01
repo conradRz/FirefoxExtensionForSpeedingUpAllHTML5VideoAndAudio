@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Taustiņu saīsnes"
   },
-  "popupWarning": {
-    "message": "Pašreizējās taustiņu saīsnes nevar mainīt, lai izvairītos no konfliktiem ar būtiskām pārlūka funkcijām vai noklusētajām taustiņu saīsnēm."
+  "popupInfo": {
+    "message": "Kā mainīt īsceļus"
   },
   "popup-apply-all-message": {
     "message": "Lietot visās nākotnes cilnēs ar video un audio"

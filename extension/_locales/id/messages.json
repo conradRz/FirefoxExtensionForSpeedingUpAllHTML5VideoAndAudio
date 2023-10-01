@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Pintasan Keyboard"
   },
-  "popupWarning": {
-    "message": "Pintasan saat ini tidak dapat diubah untuk menghindari konflik dengan fungsi penting peramban atau pintasan default."
+  "popupInfo": {
+    "message": "Cara mengubah pintasan"
   },
   "popup-apply-all-message": {
     "message": "Terapkan ke semua tab masa depan dengan video dan audio"

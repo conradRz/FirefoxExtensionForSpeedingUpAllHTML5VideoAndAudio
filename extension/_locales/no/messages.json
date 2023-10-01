@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Tastatursnarveier"
   },
-  "popupWarning": {
-    "message": "Gjeldende snarveier kan ikke endres for å unngå konflikter med viktige nettleserfunksjoner eller standard snarveier."
+  "popupInfo": {
+    "message": "Hvordan endre snarveiene"
   },
   "popup-apply-all-message": {
     "message": "Bruk på alle fremtidige faner med video og lyd"

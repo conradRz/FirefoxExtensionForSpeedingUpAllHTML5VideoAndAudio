@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Klavye Kısayolları"
   },
-  "popupWarning": {
-    "message": "Geçerli kısayollar, temel tarayıcı işlevleriyle veya varsayılan kısayollarla çakışmaları önlemek için değiştirilemez."
+  "popupInfo": {
+    "message": "Kısayollar nasıl değiştirilir?"
   },
   "popup-apply-all-message": {
     "message": "Gelecekteki tüm sekmelerde uygula (video ve ses)"

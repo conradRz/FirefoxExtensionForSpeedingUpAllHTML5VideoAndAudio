@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Dreceres de teclat"
   },
-  "popupWarning": {
-    "message": "Les dreceres actuals no es poden canviar per evitar conflictes amb funcions essencials del navegador o dreceres per defecte."
+  "popupInfo": {
+    "message": "Com canviar les dreceres"
   },
   "popup-apply-all-message": {
     "message": "Aplicar a totes les pestanyes futures amb vídeo i àudio"

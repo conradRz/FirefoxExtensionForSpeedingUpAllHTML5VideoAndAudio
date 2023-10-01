@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Tastaturgenveje"
   },
-  "popupWarning": {
-    "message": "De nuværende genveje kan ikke ændres for at undgå konflikter med essentielle browserfunktioner eller standardgenveje."
+  "popupInfo": {
+    "message": "Sådan ændres genvejene"
   },
   "popup-apply-all-message": {
     "message": "Anvend på alle fremtidige faner med video og lyd"

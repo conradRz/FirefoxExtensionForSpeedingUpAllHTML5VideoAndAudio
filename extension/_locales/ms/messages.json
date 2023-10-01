@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Pintasan Papan Kekunci"
   },
-  "popupWarning": {
-    "message": "Pintasan semasa tidak boleh diubah untuk mengelakkan konflik dengan fungsi penting pelayar atau pintasan lalai."
+  "popupInfo": {
+    "message": "Bagaimana untuk menukar pintasan"
   },
   "popup-apply-all-message": {
     "message": "Gunakan pada semua tab akan datang dengan video dan audio"

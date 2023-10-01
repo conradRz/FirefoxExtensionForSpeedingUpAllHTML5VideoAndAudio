@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "键盘快捷键"
   },
-  "popupWarning": {
-    "message": "当前快捷键不可更改，以避免与浏览器的基本功能或默认快捷键冲突。"
+  "popupInfo": {
+    "message": "如何更改快捷键"
   },
   "popup-apply-all-message": {
     "message": "应用于所有未来的带有视频和音频的标签页"

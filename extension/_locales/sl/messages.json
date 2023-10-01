@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Tipkovni bližnjice"
   },
-  "popupWarning": {
-    "message": "Trenutne bližnjice ni mogoče spremeniti, da se prepreči konflikt s pomembnimi funkcijami brskalnika ali privzetimi bližnjicami."
+  "popupInfo": {
+    "message": "Kako spremeniti bližnjice"
   },
   "popup-apply-all-message": {
     "message": "Uporabi za vse prihodnje zavihke s videoposnetki in zvočnimi posnetki"
