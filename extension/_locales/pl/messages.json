@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Skróty klawiaturowe"
   },
-  "popupWarning": {
-    "message": "Obecnych skrótów nie można zmieniać, aby uniknąć konfliktów z podstawowymi funkcjami przeglądarki lub domyślnymi skrótami."
+  "popupInfo": {
+    "message": "Jak zmienić skróty"
   },
   "popup-apply-all-message": {
     "message": "Zastosuj do wszystkich przyszłych kart z wideo i dźwiękiem"

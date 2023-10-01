@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Pikanäppäimet"
   },
-  "popupWarning": {
-    "message": "Nykyiset pikanäppäimet eivät ole muokattavissa konfliktien välttämiseksi selaimen tärkeiden toimintojen tai oletuspikanäppäinten kanssa."
+  "popupInfo": {
+    "message": "Kuinka muuttaa pikakuvakkeita"
   },
   "popup-apply-all-message": {
     "message": "Käytä kaikkiin tuleviin välilehtiin, joissa on video tai ääni"

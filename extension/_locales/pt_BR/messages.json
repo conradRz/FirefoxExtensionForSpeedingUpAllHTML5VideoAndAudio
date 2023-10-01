@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Atalhos de teclado"
   },
-  "popupWarning": {
-    "message": "Os atalhos atuais não podem ser alterados para evitar conflitos com funções essenciais do navegador ou atalhos padrão."
+  "popupInfo": {
+    "message": "Como alterar os atalhos"
   },
   "popup-apply-all-message": {
     "message": "Aplicar a todas as guias futuras com vídeo e áudio"

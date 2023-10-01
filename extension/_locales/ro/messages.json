@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Scurtături de tastatură"
   },
-  "popupWarning": {
-    "message": "Scurtăturile de tastatură curente nu pot fi modificate pentru a evita conflictele cu funcțiile esențiale ale browserului sau scurtăturile implicite."
+  "popupInfo": {
+    "message": "Cum se schimbă comenzile rapide"
   },
   "popup-apply-all-message": {
     "message": "Aplică la toate filele viitoare cu videoclipuri și fișiere audio"

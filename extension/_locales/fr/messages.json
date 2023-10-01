@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Raccourcis clavier"
   },
-  "popupWarning": {
-    "message": "Les raccourcis actuels ne peuvent pas être modifiés pour éviter les conflits avec les fonctions essentielles du navigateur ou les raccourcis par défaut."
+  "popupInfo": {
+    "message": "Comment changer les raccourcis"
   },
   "popup-apply-all-message": {
     "message": "Appliquer à tous les onglets futurs avec vidéo et audio"

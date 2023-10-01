@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Atajos de Teclado"
   },
-  "popupWarning": {
-    "message": "Los atajos actuales no se pueden cambiar para evitar conflictos con funciones esenciales del navegador o atajos predeterminados."
+  "popupInfo": {
+    "message": "Cómo cambiar los atajos"
   },
   "popup-apply-all-message": {
     "message": "Aplicar a todas las pestañas futuras con video y audio"

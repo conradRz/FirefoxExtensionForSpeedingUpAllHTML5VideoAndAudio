@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "키보드 단축키"
   },
-  "popupWarning": {
-    "message": "기본 브라우저 기능 또는 기본 단축키와 충돌을 피하기 위해 현재 단축키는 변경할 수 없습니다."
+  "popupInfo": {
+    "message": "단축키를 변경하는 방법"
   },
   "popup-apply-all-message": {
     "message": "모든 향후 탭의 비디오와 오디오에 적용"

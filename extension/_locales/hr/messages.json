@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Prečaci tipkovnice"
   },
-  "popupWarning": {
-    "message": "Trenutni prečaci nisu promjenjivi kako bi se izbjegli sukobi s bitnim funkcijama preglednika ili zadanim prečacima."
+  "popupInfo": {
+    "message": "Kako promijeniti prečace"
   },
   "popup-apply-all-message": {
     "message": "Primijeni na sve buduće kartice s videozapisima i audiozapisima"

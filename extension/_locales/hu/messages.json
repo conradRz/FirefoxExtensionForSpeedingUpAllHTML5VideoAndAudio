@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Billentyűparancsok"
   },
-  "popupWarning": {
-    "message": "Az aktuális billentyűparancsok nem módosíthatóak, hogy elkerüljék a konfliktusokat az alapvető böngészőfunkciókkal vagy az alapértelmezett billentyűparancsokkal."
+  "popupInfo": {
+    "message": "Hogyan lehet megváltoztatni a parancsikonokat"
   },
   "popup-apply-all-message": {
     "message": "Alkalmazás minden jövőbeli fülön videóval és hanggal"

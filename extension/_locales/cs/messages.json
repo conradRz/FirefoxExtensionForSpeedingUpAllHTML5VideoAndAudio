@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Klávesové zkratky"
   },
-  "popupWarning": {
-    "message": "Aktuální zkratky nelze změnit, aby nedocházelo ke konfliktům s důležitými funkcemi prohlížeče nebo výchozími zkratkami."
+  "popupInfo": {
+    "message": "Jak změnit zkratky"
   },
   "popup-apply-all-message": {
     "message": "Použít na všechny budoucí karty s videem a audio"

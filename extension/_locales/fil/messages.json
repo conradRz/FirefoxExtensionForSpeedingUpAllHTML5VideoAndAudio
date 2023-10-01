@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Mga Shortcut ng Keyboard"
   },
-  "popupWarning": {
-    "message": "Ang mga kasalukuyang shortcut ay hindi mababago upang maiwasan ang mga conflict sa mahahalagang gawain ng browser o default na shortcut."
+  "popupInfo": {
+    "message": "Paano baguhin ang mga shortcut"
   },
   "popup-apply-all-message": {
     "message": "Gamitin sa lahat ng hinaharap na mga tab na may bidyo at audio"

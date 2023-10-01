@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Prečice na tastaturi"
   },
-  "popupWarning": {
-    "message": "Trenutne prečice ne mogu biti promenjene kako bi se izbegli konflikti sa osnovnim funkcijama pretraživača ili podrazumevanim prečicama."
+  "popupInfo": {
+    "message": "Kako promeniti prečice"
   },
   "popup-apply-all-message": {
     "message": "Primeni na sve buduće kartice sa video i audio sadržajem"

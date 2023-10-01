@@ -14,8 +14,8 @@
   "popupTitle": {
     "message": "Tangentbordsgenvägar"
   },
-  "popupWarning": {
-    "message": "Nuvarande genvägar går inte att ändra för att undvika konflikter med viktiga webbläsarfunktioner eller standardgenvägar."
+  "popupInfo": {
+    "message": "Hur man ändrar genvägarna"
   },
   "popup-apply-all-message": {
     "message": "Tillämpa på alla framtida flikar med video och ljud"
