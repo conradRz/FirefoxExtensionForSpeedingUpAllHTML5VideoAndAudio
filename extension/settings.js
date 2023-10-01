@@ -42,6 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById('popupTitle').textContent = browser.i18n.getMessage('popupTitle');
-document.getElementById('popupWarning').textContent = browser.i18n.getMessage('popupWarning');
+document.getElementById('popupInfo').textContent = browser.i18n.getMessage('popupInfo');
 document.getElementById('popup-apply-all-message').textContent = browser.i18n.getMessage('popup-apply-all-message');
 document.getElementById('popup-apply-tab-message').textContent = browser.i18n.getMessage('popup-apply-tab-message');
